@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
+
+<VBox alignment="CENTER" prefHeight="416.0" prefWidth="601.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.translatedocumenttool.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label alignment="CENTER" prefHeight="17.0" prefWidth="140.0" text="TOOL TRANSLATE AI">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="502.0">
+      <children>
+         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <children>
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="95.0" text="Chon file cần dịch">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+               </Label>
+               <TextField fx:id="selectFileInput" editable="false" prefHeight="25.0" prefWidth="393.0" />
+            </children>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </VBox>
+      
+          <Label fx:id="welcomeText" />
+         <Button fx:id="selectFileButton" mnemonicParsing="false" onAction="#onSelectFileButtonClick" prefHeight="25.0" prefWidth="86.0" text="Chọn File">
+            <HBox.margin>
+               <Insets left="30.0" top="17.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+      <VBox.margin>
+         <Insets left="30.0" right="30.0" />
+      </VBox.margin>
+   </HBox>
+   <HBox prefHeight="46.0" prefWidth="501.0">
+      <VBox.margin>
+         <Insets left="30.0" right="30.0" />
+      </VBox.margin>
+      <children>
+         <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <children>
+                <CheckComboBox fx:id="sheetComboBox" items="Chọn tất cả" prefHeight="9.0" prefWidth="530.0" title="Chọn các sheet cần dịch" VBox.vgrow="ALWAYS" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <HBox prefHeight="52.0" prefWidth="501.0">
+      <children>
+         <VBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="501.0" HBox.hgrow="ALWAYS">
+            <children>
+               <Label prefHeight="17.0" prefWidth="176.0" text="Paste endpoint máy dịch vào đây" />
+               <TextField VBox.vgrow="ALWAYS" />
+            </children>
+         </VBox>
+      </children>
+      <VBox.margin>
+         <Insets left="30.0" right="30.0" />
+      </VBox.margin>
+   </HBox>
+   <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="561.0">
+      <children>
+         <VBox alignment="CENTER" prefHeight="25.0" prefWidth="501.0" HBox.hgrow="ALWAYS">
+            <children>
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="153.0" text="Trạng thái xử lý" VBox.vgrow="ALWAYS">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Label>
+               <ProgressBar prefHeight="18.0" prefWidth="618.0" progress="0.0" VBox.vgrow="ALWAYS" />
+            </children>
+            <HBox.margin>
+               <Insets left="30.0" right="30.0" />
+            </HBox.margin>
+         </VBox>
+      </children>
+   </HBox>
+   <Button mnemonicParsing="false" text="Bắt đầu dịch!" />
+</VBox>
