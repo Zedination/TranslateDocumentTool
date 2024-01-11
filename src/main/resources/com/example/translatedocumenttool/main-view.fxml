@@ -63,7 +63,7 @@
          <VBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="501.0" HBox.hgrow="ALWAYS">
             <children>
                <Label prefHeight="17.0" prefWidth="240.0" text="Paste endpoint máy dịch vào đây" />
-               <TextField fx:id="endpointInput" VBox.vgrow="ALWAYS" />
+               <TextField fx:id="endpointInput" text="http://localhost:5000/translate" VBox.vgrow="ALWAYS" />
             </children>
          </VBox>
       </children>
@@ -80,7 +80,7 @@
             <VBox.margin>
                <Insets />
             </VBox.margin>
-            <AutoCompleteTextField fx:id="sourceLangInput" prefHeight="25.0" prefWidth="265.0" promptText="Chọn ngôn ngữ nguồn" HBox.hgrow="ALWAYS">
+            <AutoCompleteTextField fx:id="sourceLangInput" prefHeight="25.0" prefWidth="265.0" promptText="Chọn ngôn ngữ nguồn" text="jpn_Jpan" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
@@ -90,7 +90,7 @@
                   <FontIcon iconLiteral="mdmz-swap_horiz" />
                </graphic>
             </Button>
-            <AutoCompleteTextField fx:id="targetLangInput" prefHeight="25.0" prefWidth="265.0" promptText="Chọn ngôn ngữ cần dịch sang" HBox.hgrow="ALWAYS">
+            <AutoCompleteTextField fx:id="targetLangInput" prefHeight="25.0" prefWidth="265.0" promptText="Chọn ngôn ngữ cần dịch sang" text="vie_Latn" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>

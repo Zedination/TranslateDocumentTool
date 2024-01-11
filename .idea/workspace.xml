@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d66a45e8-58a6-4ca0-8aff-c2d9c65def5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/component/AutoCompleteTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/model/GroupCellData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,11 +76,21 @@
       <updated>1704643110194</updated>
       <workItem from="1704643111746" duration="16142000" />
       <workItem from="1704738257742" duration="1090000" />
-      <workItem from="1704808733068" duration="9909000" />
+      <workItem from="1704808733068" duration="27439000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="row.getRowNum()" />
+      </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" line="181">
+        <watch expression="row.getRowNum()" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>
