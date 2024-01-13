@@ -5,6 +5,7 @@ import javafx.scene.control.ContextMenu;
 import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -38,12 +39,13 @@ public class AutoCompleteTextField extends TextField {
         super();
         entries = new TreeSet<>();
         entriesPopup = new ContextMenu();
+//        entriesPopup.prefWidth(100);
         textProperty().addListener((observableValue, s, s2) -> {
             if (getText().length() == 0) {
                 entriesPopup.hide();
             } else {
 //                LinkedList<String> searchResult = new LinkedList<>(entries.subSet(getText(), getText() + Character.MAX_VALUE));
-                List<String> searchResult = entries.stream().filter(x -> x.contains(getText())).toList();
+                List<String> searchResult = entries.stream().filter(x -> StringUtils.stripAccents(x).toLowerCase().contains(StringUtils.stripAccents(getText()).toLowerCase())).toList();
                 if (entries.size() > 0) {
                     populatePopup(searchResult);
                     if (!entriesPopup.isShowing()) {

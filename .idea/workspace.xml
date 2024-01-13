@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d66a45e8-58a6-4ca0-8aff-c2d9c65def5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/constant/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/Functional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/TranslateTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/component/AutoCompleteTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/component/AutoCompleteTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -78,7 +81,7 @@
       <updated>1704643110194</updated>
       <workItem from="1704643111746" duration="16142000" />
       <workItem from="1704738257742" duration="1090000" />
-      <workItem from="1704808733068" duration="41065000" />
+      <workItem from="1704808733068" duration="59167000" />
     </task>
     <servers />
   </component>
@@ -86,20 +89,10 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="row.getRowNum()" />
         <watch expression="c.toString()" language="JAVA" />
-        <watch expression="this.sheetComboBox.getCheckModel().getCheckedItems()" />
       </configuration>
     </watches-manager>
   </component>

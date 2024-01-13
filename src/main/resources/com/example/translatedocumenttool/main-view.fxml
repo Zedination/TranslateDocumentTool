@@ -82,7 +82,10 @@
                      <Insets right="30.0" />
                   </HBox.margin>
                </AutoCompleteTextField>
-               <Button fx:id="buttonSwitch" mnemonicParsing="false">
+<!--            <SearchableComboBox fx:id="sourceLangInput" >-->
+
+<!--            </SearchableComboBox>-->
+               <Button fx:id="buttonSwitch" mnemonicParsing="false" onAction="#swapLangInput">
                   <graphic>
                      <FontIcon iconLiteral="mdmz-swap_horiz" />
                   </graphic>
@@ -121,7 +124,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
-                  <ProgressBar maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="618.0" progress="0.0" VBox.vgrow="ALWAYS" />
+                  <ProgressBar fx:id="progressTranslateBar" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="618.0" progress="0.0" VBox.vgrow="ALWAYS" />
                </children>
                <HBox.margin>
                   <Insets left="30.0" right="30.0" />
@@ -129,11 +132,23 @@
             </VBox>
          </children>
       </HBox>
-      <Button fx:id="translateButton" mnemonicParsing="false" onAction="#onTranslateButtonClick" text="Bắt đầu dịch!">
-         <graphic>
-            <FontIcon iconLiteral="mdmz-translate" />
-         </graphic>
-      </Button>
+      <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="717.0">
+         <children>
+            <Button fx:id="translateButton" mnemonicParsing="false" onAction="#onTranslateButtonClick" styleClass="accent" text="Bắt đầu dịch!">
+               <graphic>
+                  <FontIcon iconLiteral="mdmz-translate" />
+               </graphic>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onCancelButtonClick" styleClass="danger" text="Cancel">
+               <graphic>
+                  <FontIcon iconLiteral="mdoal-cancel" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </padding>
