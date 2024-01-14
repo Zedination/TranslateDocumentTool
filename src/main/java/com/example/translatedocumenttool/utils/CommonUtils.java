@@ -8,10 +8,15 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.RegionUtil;
 
+import java.io.IOException;
 import java.math.RoundingMode;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.util.*;
@@ -52,31 +57,23 @@ public class CommonUtils {
     }
 
     public static String translate(String srcText, String srcLang, String targetLang, String transServerEndpoint) {
-//        var param = "?src_lang=" + encodeValue(srcLang) + "&src_text=" + encodeValue(srcText) + "&target_lang=" +  encodeValue(targetLang);
-//        HttpClient client = HttpClient.newHttpClient();
-//        HttpRequest request = HttpRequest.newBuilder()
-//                .uri(URI.create(transServerEndpoint + param))
-//                .GET()
-//                .build();
-//        HttpResponse<String> response = null;
-//        try {
-//            response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//        } catch (IOException | InterruptedException e) {
-//            return StringUtils.EMPTY;
-//        }
-//        if (response.statusCode() == 200) {
-//            return JsonParser.parseString(response.body()).getAsJsonObject().get("target_text").getAsString();
-//        } else {
-//            return StringUtils.EMPTY;
-//        }
-
+        var param = "?src_lang=" + encodeValue(srcLang) + "&src_text=" + encodeValue(srcText) + "&target_lang=" +  encodeValue(targetLang);
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(transServerEndpoint + param))
+                .GET()
+                .build();
+        HttpResponse<String> response = null;
         try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (IOException | InterruptedException e) {
+            return StringUtils.EMPTY;
         }
-        System.out.println("===========");
-        return "Dummy traslate content!";
+        if (response.statusCode() == 200) {
+            return JsonParser.parseString(response.body()).getAsJsonObject().get("target_text").getAsString();
+        } else {
+            return StringUtils.EMPTY;
+        }
     }
 
     private static String encodeValue(String value) {

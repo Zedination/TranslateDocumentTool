@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d66a45e8-58a6-4ca0-8aff-c2d9c65def5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build-installer.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <updated>1704643110194</updated>
       <workItem from="1704643111746" duration="16142000" />
       <workItem from="1704738257742" duration="1090000" />
-      <workItem from="1704808733068" duration="69389000" />
+      <workItem from="1704808733068" duration="69668000" />
     </task>
     <servers />
   </component>
