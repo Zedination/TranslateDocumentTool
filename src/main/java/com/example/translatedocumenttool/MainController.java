@@ -4,11 +4,13 @@ import atlantafx.base.controls.Notification;
 import atlantafx.base.controls.ToggleSwitch;
 import atlantafx.base.theme.Styles;
 import atlantafx.base.util.Animations;
+import atlantafx.base.util.BBCodeParser;
 import com.example.translatedocumenttool.component.AutoCompleteTextField;
 import com.example.translatedocumenttool.constant.NotificationType;
 import com.example.translatedocumenttool.task.Functional;
 import com.example.translatedocumenttool.task.TranslateTask;
 import com.example.translatedocumenttool.utils.CommonUtils;
+import javafx.application.Platform;
 import javafx.collections.ListChangeListener;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
@@ -32,7 +34,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.controlsfx.control.CheckComboBox;
-import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.material2.Material2OutlinedAL;
 
@@ -208,6 +209,17 @@ public class MainController {
     }
 
     @FXML
+    protected void showAuthorDialog() {
+        this.alertAuthor();
+    }
+
+    @FXML
+    protected void closeApp() {
+//        System.exit(0);
+        Platform.exit();
+    }
+
+    @FXML
     public void initialize() {
         this.sheetComboBox.getCheckModel().getCheckedItems().addListener(new ListChangeListener<>() {
             private boolean changing = false;
@@ -255,6 +267,20 @@ public class MainController {
         alert.show();
     }
 
+    private void alertAuthor() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("About Translate Tool AI");
+        String authorInfo = """
+                Tác giả: Lê Anh Đức
+                Email: leanhduc9999@gmail.com
+                Website: [url]https://zedination.dev[/url]
+                """;
+        alert.setHeaderText(null);
+        alert.setGraphic(BBCodeParser.createLayout(authorInfo));
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.show();
+    }
+
     private void alertException(String text, Exception e) {
         var alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Exception Dialog");
@@ -286,7 +312,6 @@ public class MainController {
     private boolean validate() {
         // clear old validate
         this.selectFileInput.pseudoClassStateChanged(Styles.STATE_DANGER, false);
-//        this.sheetComboBox.getStylesheets().remove(CSS);
         this.sheetComboBox.setBorder(null);
         this.sourceLangInput.pseudoClassStateChanged(Styles.STATE_DANGER, false);
         this.targetLangInput.pseudoClassStateChanged(Styles.STATE_DANGER, false);
@@ -298,7 +323,6 @@ public class MainController {
             isValid = false;
         }
         if(this.sheetComboBox.getCheckModel().getCheckedItems().isEmpty()) {
-//            this.sheetComboBox.pseudoClassStateChanged(Styles.STATE_DANGER, true);
             Border redBorder = new Border(
                     new BorderStroke(Color.RED, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1)));
             this.sheetComboBox.setBorder(redBorder);
@@ -322,7 +346,6 @@ public class MainController {
 
     private void showNotification(String text, NotificationType notificationType, Functional functional) {
         Notification msg = null;
-        Ikon ikon = null;
         switch (notificationType) {
             case SUCCESS -> {
                 msg = new Notification(

@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d66a45e8-58a6-4ca0-8aff-c2d9c65def5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/Functional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/TranslateTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/Main1Class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/component/AutoCompleteTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/component/AutoCompleteTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" afterDir="false" />
     </list>
@@ -23,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,7 +60,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main1Class">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.translatedocumenttool.HelloApplication" />
       <module name="TranslateDocumentTool" />
@@ -70,6 +68,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main1Class" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.translatedocumenttool.Main1Class" />
+      <module name="TranslateDocumentTool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.translatedocumenttool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main1Class" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main1Class" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,7 +101,7 @@
       <updated>1704643110194</updated>
       <workItem from="1704643111746" duration="16142000" />
       <workItem from="1704738257742" duration="1090000" />
-      <workItem from="1704808733068" duration="59167000" />
+      <workItem from="1704808733068" duration="66103000" />
     </task>
     <servers />
   </component>

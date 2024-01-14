@@ -9,7 +9,7 @@ module com.example.translatedocumenttool {
     requires com.google.gson;
     requires org.apache.poi.poi;
     requires atlantafx.base;
-    requires org.kordamp.ikonli.core;
+//    requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.material2;
     requires org.apache.commons.lang3;
