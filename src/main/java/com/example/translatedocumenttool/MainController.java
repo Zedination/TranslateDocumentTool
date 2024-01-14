@@ -328,7 +328,7 @@ public class MainController {
             this.sheetComboBox.setBorder(redBorder);
             isValid = false;
         }
-        if (!this.sourceLangInput.getEntries().contains(this.sourceLangInput.getText())) {
+        if (!this.sourceLangInput.getEntries().contains(this.sourceLangInput.getText()) && !StringUtils.isBlank(this.sourceLangInput.getText())) {
             this.sourceLangInput.pseudoClassStateChanged(Styles.STATE_DANGER, true);
             isValid = false;
         }
