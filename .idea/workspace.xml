@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d66a45e8-58a6-4ca0-8aff-c2d9c65def5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/constant/AppConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tool Translate Excel-1.0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tool Translate Excel-1.0.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tool Translate Excel-1.0.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-installer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build-installer.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fatjar/TranslateDocumentTool-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/fatjar/TranslateDocumentTool-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/Functional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/task/Functional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/translatedocumenttool/utils/CommonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/translatedocumenttool/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -105,6 +110,7 @@
       <workItem from="1704738257742" duration="1090000" />
       <workItem from="1704808733068" duration="70867000" />
       <workItem from="1705255717014" duration="557000" />
+      <workItem from="1705597448945" duration="8080000" />
     </task>
     <servers />
   </component>

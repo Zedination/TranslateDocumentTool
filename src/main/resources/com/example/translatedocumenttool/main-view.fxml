@@ -79,11 +79,20 @@
          </HBox>
          <HBox prefHeight="52.0" prefWidth="501.0">
             <children>
-               <VBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="501.0" HBox.hgrow="ALWAYS">
+               <VBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="501.0" HBox.hgrow="ALWAYS">
                   <children>
                      <Label prefHeight="17.0" prefWidth="240.0" text="Paste endpoint máy dịch vào đây" />
-                     <TextField fx:id="endpointInput" text="http://localhost:5000/translate" VBox.vgrow="ALWAYS" />
+                     <TextField fx:id="endpointInput" maxWidth="1.7976931348623157E308" text="http://localhost:5000/translate" VBox.vgrow="ALWAYS" />
                   </children>
+               </VBox>
+               <VBox alignment="CENTER_LEFT" maxWidth="346.0" prefHeight="52.0" prefWidth="220.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label prefHeight="17.0" prefWidth="166.0" text="Chọn engine dịch" />
+                     <ComboBox fx:id="engineCombobox" maxWidth="346.0" onAction="#loadListLang" prefHeight="25.0" prefWidth="346.0" VBox.vgrow="ALWAYS" />
+                  </children>
+                  <HBox.margin>
+                     <Insets left="30.0" />
+                  </HBox.margin>
                </VBox>
             </children>
             <VBox.margin>

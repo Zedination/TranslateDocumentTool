@@ -6,6 +6,7 @@ import atlantafx.base.theme.Styles;
 import atlantafx.base.util.Animations;
 import atlantafx.base.util.BBCodeParser;
 import com.example.translatedocumenttool.component.AutoCompleteTextField;
+import com.example.translatedocumenttool.constant.AppConstant;
 import com.example.translatedocumenttool.constant.NotificationType;
 import com.example.translatedocumenttool.task.Functional;
 import com.example.translatedocumenttool.task.TranslateTask;
@@ -41,6 +42,8 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.MessageFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -72,6 +75,9 @@ public class MainController {
 
     @FXML
     private ProgressBar progressTranslateBar;
+
+    @FXML
+    private ComboBox<String> engineCombobox;
 
     private Service<Void> translateService;
 
@@ -129,7 +135,9 @@ public class MainController {
             @Override
             protected void failed() {
                 super.failed();
+                showNotification("Có lỗi xảy ra trong quá trình xử lý", NotificationType.ERROR, null);
                 progressTranslateBar.progressProperty().unbind();
+                progressTranslateBar.progressProperty().set(0);
             }
 
             @Override
@@ -147,7 +155,8 @@ public class MainController {
                     String srcLang = sourceLangInput.getText().split(" - ")[sourceLangInput.getText().split(" - ").length - 1];
                     String targetLang = targetLangInput.getText().split(" - ")[targetLangInput.getText().split(" - ").length - 1];
 
-                    fileName = MessageFormat.format("{0}/{1}{2}_{3}.xlsx", srcFile.getParent(), srcFile.getName().replace(".xlsx", ""), System.currentTimeMillis(), targetLang);
+                    fileName = MessageFormat.format("{0}/{1}_{2}_{3}.xlsx", srcFile.getParent(), srcFile.getName().replace(".xlsx", ""),
+                            DateTimeFormatter.ofPattern("yyyyMMdd hhmmss").format(LocalDateTime.now()), targetLang);
                     // start logic translate
                     List<String> sheetsNames = new ArrayList<>(sheetComboBox.getCheckModel().getCheckedItems().stream().toList());
                     if (sheetsNames.contains(sheetComboBox.getItems().get(0))) {
@@ -235,11 +244,19 @@ public class MainController {
             }
         });
 
-        List<String> langList = new ArrayList<>(List.of(StringUtils.trim(CommonUtils.LIST_LANG).split("\n")));
-        this.sourceLangInput.getEntries().addAll(langList);
-        this.targetLangInput.getEntries().addAll(langList);
+        this.loadListTranslateEngine();
+        this.loadListLang();
 
         this.progressTranslateBar.getStyleClass().add(Styles.SMALL);
+    }
+
+    @FXML
+    protected void loadListLang() {
+        List<String> langList = new ArrayList<>(List.of(StringUtils.trim(AppConstant.MAP_LANGS.get(StringUtils.trim(this.engineCombobox.getValue()))).split("\n")));
+        this.sourceLangInput.getEntries().clear();
+        this.targetLangInput.getEntries().clear();
+        this.sourceLangInput.getEntries().addAll(langList);
+        this.targetLangInput.getEntries().addAll(langList);
     }
 
     private void loadListSheetsForCombobox(File file) {
@@ -255,6 +272,11 @@ public class MainController {
         } catch (IOException e) {
             alertException("IO Exception", e);
         }
+    }
+
+    private void loadListTranslateEngine() {
+        this.engineCombobox.getItems().addAll("MADLAD-400-MT", "NLLB-200");
+        this.engineCombobox.getSelectionModel().selectFirst();
     }
 
 
@@ -274,9 +296,21 @@ public class MainController {
                 Tác giả: Lê Anh Đức
                 Email: leanhduc9999@gmail.com
                 Website: [url]https://zedination.dev[/url]
+                
+                [b]NLLB-200:[/b] Model được training bởi Meta AI, hỗ trợ hơn 200 ngôn ngữ, có chất lượng dịch tương đối tốt,
+                tốc độ dịch nhanh hơn MADLAD-400;
+                License: CC-BY-NC-4.0
+                
+                [b]MADLAD-400-MT:[/b] Model được traning bởi Google, hỗ trợ 419 ngôn ngữ, có chất lượng dịch rất tốt
+                nhưng tốc độ dịch chậm hơn NLLB-200;
+                License: Apache 2.0
+                
+                Chi tiết tài liệu xem tại [url]https://arxiv.org/pdf/2309.04662.pdf[/url]
                 """;
         alert.setHeaderText(null);
-        alert.setGraphic(BBCodeParser.createLayout(authorInfo));
+        VBox vBox = BBCodeParser.createLayout(authorInfo);
+        vBox.setMaxWidth(550);
+        alert.setGraphic(vBox);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.show();
     }
