@@ -1,0 +1,10 @@
+
+g	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8øÌúîÑ1
+t
+java:S3776c"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ëıŞÏüÿÿÿÿ8¨ÍúîÑ1
+]	java:S899‚";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ8®ÍúîÑ1
+q
+java:S4042‚"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ8®ÍúîÑ1
+E
+java:S1185"(Remove this method to simply inherit it.(ú¡­,8¯ÍúîÑ1
+^	java:S125ã"<This block of commented-out lines of code should be removed.(´£ç‚øÿÿÿÿ8ºÍúîÑ1

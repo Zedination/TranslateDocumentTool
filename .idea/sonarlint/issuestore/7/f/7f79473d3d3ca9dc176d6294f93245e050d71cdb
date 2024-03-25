@@ -1,0 +1,6 @@
+
+X	java:S110"<This class has 7 parents which is greater than 5 authorized.(‡ÄÖÄ8âµßöÏ1
+]	java:S125*"<This block of commented-out lines of code should be removed.(Ž„þÿÿÿÿ8ÃüùöÏ1
+X	java:S125/"<This block of commented-out lines of code should be removed.(Ú›Œ´8îµßöÏ1
+`
+java:S11551">Use isEmpty() to check whether the collection is empty or not.(»½Ó¹øÿÿÿÿ8îµßöÏ1
